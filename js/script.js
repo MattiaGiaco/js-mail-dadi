@@ -17,22 +17,25 @@ const emailList = ['ciao@gmail.com',
   'hulk@gmail.com',
   'thor@gmail.com'
 ];
+console.log(emailList);
 
- let userEmail = 'thor@gmail.com' // prompt
+ let userEmail = prompt('Inserisci la tua Email')
+ console.log(userEmail);
 
- let email = false;
+ let emailCheck = false;
 
- for (let i=0; i<emailList.lenght; i++){
-  if(emailList[i] === emailList){
-    console.log('trovato');
-    email = true;
+  for (let i=0; i < emailList.length; i++) {
+    if (emailList[i] === userEmail) {
+      emailCheck = true;
+    }
   }
- }
 
- if(email == true){
-   console.log('login');
+ if (emailCheck == true){
+   console.log("registrato");
+   document.getElementById('log-in').innerHTML = "Benvenuto!"
  }else{
-   console.log('out');
+   console.log("crea account");
+   document.getElementById('log-in').innerHTML = "Email non trovatatizio"
  }
 
 // Dadi
